@@ -15,7 +15,6 @@ class HTTP_Methods:
     def get(url):
         Logger.add_request(url, method='GET')
         result = requests.get(url, headers=HTTP_Methods.headers, cookies=HTTP_Methods.cookie)
-        print(result)
         Logger.add_response(result)
         return result
 

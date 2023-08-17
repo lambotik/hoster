@@ -50,14 +50,14 @@ class Checking:
     """Method for checking values of required fields in response"""
 
     @staticmethod
-    def check_json_value(response: json, field_name: str, expected_value: str):
+    def check_json_value(response: json, field_name: str, expected_value):
         check = response.json()
         check_info = check.get(field_name)
         assert check_info == expected_value, 'Result is not equal expected value'
         print(f'{field_name}: {expected_value}: is correct')
 
     @staticmethod
-    def check_json_search_word_in_value(response: json, key: str, search_word: str):
+    def check_json_search_word_in_value(response, key, search_word):
         """
         Checks if the required string is in the response JSON by key
         :param response: JSON
@@ -67,19 +67,19 @@ class Checking:
         """
         check = response.json()
         check_info = check.get(key)
-        if search_word in check_info:
-            print(f'Value: {search_word}, is presence in: {key}')
-        else:
-            print(f'Value: {search_word} is not presence in: {key}')
+        print(check_info, search_word)
+        assert search_word in check_info, f'{check_info} is not presence'
+        print(f'Value: {search_word}, is presence in: {key}')
+
 
     @staticmethod
-    def check_json_search_word_in_values(response: dict, key: str, search_word: str):
+    def check_json_search_word_in_values(response, key, search_word):
         """
         Checks if the required string is in the dictionary by key
-        :param response: dict
-        :param key: str()
-        :param search_word: str()
+        :param response:
+        :param key:
+        :param search_word:
         :return: answer
         """
-        assert search_word in response[key], f'{key} is not presence'
+        assert search_word in str(response[key]), f'{key} is not presence'
         print(f'Value: {search_word}, is presence in: {key}')

@@ -3,6 +3,7 @@ from utils.http_methods import HTTP_Methods
 base_url = 'https://reqres.in/'  # Base url
 
 
+
 class HosterAPI:
 
     @staticmethod
@@ -48,8 +49,8 @@ class HosterAPI:
         put_url = base_url + put_resource + user_id
         print(put_url)
         json_for_update_new_place = {
-            "name": 'HOSTER',
-            "job": "Hoster.by"
+            "name": 'morpheus',
+            "job": "zion resident"
         }
         result_put = HTTP_Methods.put(put_url, json_for_update_new_place)
         print('Response body: ', result_put.text)
