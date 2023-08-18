@@ -67,10 +67,8 @@ class Checking:
         """
         check = response.json()
         check_info = check.get(key)
-        print(check_info, search_word)
         assert search_word in check_info, f'{check_info} is not presence'
         print(f'Value: {search_word}, is presence in: {key}')
-
 
     @staticmethod
     def check_json_search_word_in_values(response, key, search_word):
@@ -81,5 +79,5 @@ class Checking:
         :param search_word:
         :return: answer
         """
-        assert search_word in str(response[key]), f'{key} is not presence'
+        assert str(search_word) in str(response[key]), f'{str(key)} is not presence'
         print(f'Value: {search_word}, is presence in: {key}')
