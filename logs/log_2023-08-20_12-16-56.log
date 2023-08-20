@@ -1,0 +1,117 @@
+
+------
+Test: test_hoster.py::TestHoster::test_info_new_user (setup)
+Time: 2023-08-20 12:16:56.237146
+Request method: POST
+Request URL: https://reqres.in/api/users
+
+Response code: 201
+Response text: {"name":"lambotik","job":"qa","id":"857","createdAt":"2023-08-20T09:16:55.558Z"}
+Response headers: {'Date': 'Sun, 20 Aug 2023 09:16:55 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '80', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"50-dxilREM44ZhmEhd9W1yCY3FHDiI"', 'Via': '1.1 vegur', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=6VoT8esJ4N0xO68zQS9EZ%2BERL1BzATwzNWhHthJ0hKtEB8xWTc1ekId6b4r13Q029Ddh8C6McaUJ2sxDfqQD3PExsuXGLPGA7eteVB9mEOu4GjHL15ptJo%2Ftzg%3D%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '7f998a4e6cb89d8c-DME'}
+Response cookies: {}
+
+------
+
+------
+Test: test_hoster.py::TestHoster::test_info_new_user (call)
+Time: 2023-08-20 12:16:56.559877
+Request method: GET
+Request URL: https://reqres.in/api/users/857
+
+Response code: 404
+Response text: {}
+Response headers: {'Date': 'Sun, 20 Aug 2023 09:16:55 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '2', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"', 'Via': '1.1 vegur', 'Cache-Control': 'max-age=14400', 'CF-Cache-Status': 'MISS', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=gWPwEYes1uVaTjSESeKZJzepFn2QLMVjLisBo%2BfBhekNiCwb%2BrQoev2RtTO%2FxVHF2e6YM%2BLl%2BnlgPDtSxNJy7iSXcRkuN%2BA6ckoWftxUjQtARRDis65Cu2NAFg%3D%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Vary': 'Accept-Encoding', 'Server': 'cloudflare', 'CF-RAY': '7f998a505a8516a7-DME'}
+Response cookies: {}
+
+------
+
+------
+Test: test_hoster.py::TestHoster::test_info_default_user (call)
+Time: 2023-08-20 12:16:56.971789
+Request method: GET
+Request URL: https://reqres.in/api/users/2
+
+Response code: 200
+Response text: {"data":{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}}
+Response headers: {'Date': 'Sun, 20 Aug 2023 09:16:56 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"118-pbdwwFo9SKNhD3Lx5iHJyngpq00"', 'Via': '1.1 vegur', 'Cache-Control': 'max-age=14400', 'CF-Cache-Status': 'HIT', 'Age': '1576', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=hNQb4h%2FslG53olYerROFTRKUutatwk%2Bhjgtgj78g1zNe0M1wu2DAq92NUOn%2B3Sh0M%2BGP%2BMKoetMMFynn7E0PflXYOPqVQu7YYv4N3Y5INk%2B6OOR9pzv05vIyvA%3D%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Vary': 'Accept-Encoding', 'Server': 'cloudflare', 'CF-RAY': '7f998a52b8029d6f-DME', 'Content-Encoding': 'gzip'}
+Response cookies: {}
+
+------
+
+------
+Test: test_hoster.py::TestHoster::test_update_new_user_info (setup)
+Time: 2023-08-20 12:16:57.090434
+Request method: POST
+Request URL: https://reqres.in/api/users
+
+Response code: 201
+Response text: {"name":"lambotik","job":"qa","id":"469","createdAt":"2023-08-20T09:16:56.362Z"}
+Response headers: {'Date': 'Sun, 20 Aug 2023 09:16:56 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '80', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"50-EQu3YiPVR52Re4gXwavQbP2p3dI"', 'Via': '1.1 vegur', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=pNHg0UwBYz2zSlYHFtR1h5SS6e5cV4kAZ%2BdN1EJLAdp%2BQ9qMdqDKeWKPlNwoKzT%2F4tjDTiJxttqvD6mm4YOLjczJkiSo6h8isPPAVafbYFMrmA%2Bygiesy%2BDsvg%3D%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '7f998a537e5f9d3f-DME'}
+Response cookies: {}
+
+------
+
+------
+Test: test_hoster.py::TestHoster::test_update_new_user_info (call)
+Time: 2023-08-20 12:16:57.357312
+Request method: PUT
+Request URL: https://reqres.in/api/users/469
+
+Response code: 200
+Response text: {"name":"HOSTER","job":"QA","updatedAt":"2023-08-20T09:16:56.614Z"}
+Response headers: {'Date': 'Sun, 20 Aug 2023 09:16:56 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"43-+LED4G3xMkwLbQFm3nzWI2M2ZTk"', 'Via': '1.1 vegur', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=qJIEZWpzbTkz8uzshoaHF5CaBuoc9HuN0mfIv5XHlxB1g5pNitcyo5asHaJQMK606NHM%2FEKlwPBUqc2QF4%2FRZYQaH9X5ZNIjF3Vox3MrwNTgInezF%2BNYe3CRwA%3D%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Vary': 'Accept-Encoding', 'Server': 'cloudflare', 'CF-RAY': '7f998a552fa6167e-DME', 'Content-Encoding': 'gzip'}
+Response cookies: {}
+
+------
+
+------
+Test: test_hoster.py::TestHoster::test_update_default_user_info (call)
+Time: 2023-08-20 12:16:57.622968
+Request method: PUT
+Request URL: https://reqres.in/api/users/2
+
+Response code: 200
+Response text: {"name":"morpheus","job":"zion resident","updatedAt":"2023-08-20T09:16:56.873Z"}
+Response headers: {'Date': 'Sun, 20 Aug 2023 09:16:56 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"50-MOUnLY4XtS4rIaaPas30SBDOohY"', 'Via': '1.1 vegur', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=%2BZ77Ryo7HzDhgv7nxnyD9AQTz%2Bi1SvuOos1FFhs%2FcPflD2zEi0SSKE%2BKYGVec4PvXEb4c7DPSJGznriN38GHYJz2%2FnPHlub8SvkaBdbtbnxswRx8Zsx%2F0QsX8Q%3D%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Vary': 'Accept-Encoding', 'Server': 'cloudflare', 'CF-RAY': '7f998a56ce2e3a55-DME', 'Content-Encoding': 'gzip'}
+Response cookies: {}
+
+------
+
+------
+Test: test_hoster.py::TestHoster::test_delete_default_user (call)
+Time: 2023-08-20 12:16:57.877652
+Request method: DELETE
+Request URL: https://reqres.in/api/users/2
+
+Response code: 204
+Response text: 
+Response headers: {'Date': 'Sun, 20 Aug 2023 09:16:57 GMT', 'Content-Length': '0', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"', 'Via': '1.1 vegur', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=FlUNzRj%2BRmwFYiS5vNdsO%2Bli5EWOx741gNh4Qi6NLxck3l4srI%2FzVROmSQzTR0yspRVM3LBItdq1%2BDznqp33JPuVNc4MwkHi6vtHJ6B5YkTsxTFypX%2FSbF0CGg%3D%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '7f998a58890f7b1b-DME'}
+Response cookies: {}
+
+------
+
+------
+Test: test_hoster.py::TestHoster::test_delete_new_user (setup)
+Time: 2023-08-20 12:16:58.158251
+Request method: POST
+Request URL: https://reqres.in/api/users
+
+Response code: 201
+Response text: {"name":"lambotik","job":"qa","id":"397","createdAt":"2023-08-20T09:16:57.415Z"}
+Response headers: {'Date': 'Sun, 20 Aug 2023 09:16:57 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '80', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"50-4cXfmpBIdWh2IPVHbFPUQMse4ZQ"', 'Via': '1.1 vegur', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=dBlI3bUTA0Te5FgCE7gU9aD6lDnJdGUyev7uoQUCRwhXWOox%2BgnaVNXkm7cOmWQVoPsKv30hMSe3jFnw6UteNcpk2O8djde%2FcOfiyu6ntLdFy9Jhjyn2T2cT5g%3D%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '7f998a5a2a2b7b5b-DME'}
+Response cookies: {}
+
+------
+
+------
+Test: test_hoster.py::TestHoster::test_delete_new_user (call)
+Time: 2023-08-20 12:16:58.416826
+Request method: DELETE
+Request URL: https://reqres.in/api/users/397
+
+Response code: 204
+Response text: 
+Response headers: {'Date': 'Sun, 20 Aug 2023 09:16:57 GMT', 'Content-Length': '0', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"', 'Via': '1.1 vegur', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=GUoBvKDqgBAwwDsGqnbC714EPgr%2BmT3FGdYML85Qz6xGFZ9C7xwylaliTBJAUOt3a2sw8Brdh3OMLuDHE72j794xk%2FiQWVwXyc9WlILbrgNXdrddcNqFkw2c5g%3D%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '7f998a5bcf399d55-DME'}
+Response cookies: {}
+
+------
