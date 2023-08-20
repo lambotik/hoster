@@ -6,8 +6,8 @@ Test task for hoster.by
 - 4.After installed python
 - 5.Copy this line in command line and press enter:
   
-- 6.```git clone https://github.com/lambotik/hoster.git```
-- 7.```cd hoster```
-- 8.```pytest --alluredir=test_result/ test_hoster.py```
-- 9.```allure serve test_result```
+- 6.Copy this line in command line and press enter:```git clone https://github.com/lambotik/hoster.git```
+- 7.Copy this line in command line and press enter:```cd hoster```
+- 8.Copy this line in command line and press enter:```pytest --alluredir=test_result/ test_hoster.py```
+- 9.Copy this line in command line and press enter:```allure serve test_result```
 
