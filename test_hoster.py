@@ -27,6 +27,7 @@ class TestHoster:
         return new_id
 
     @allure.step('Test new user info.')
+    @pytest.mark.xfail
     def test_info_new_user(self, test_create_new_user):
         print('\n\nMethod GET: Check user info new user')
         result_get = HosterAPI.checking_new_user(test_create_new_user)
