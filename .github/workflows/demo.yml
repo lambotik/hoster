@@ -32,4 +32,5 @@ jobs:
           pipenv install -r requirements.txt
       - name: Run test suite
         run: |
-          pipenv run test -v
+          pipenv run pytest --alluredir=test_result/ test_hoster.py
+          pipenv run allure serve test_result
