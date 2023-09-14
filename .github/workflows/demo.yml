@@ -33,5 +33,5 @@ jobs:
           
       - name: Run test suite
         run: |
-          pipenv run pytest --alluredir=test_result/ test_hoster.py
+          pipenv run pytest -s -v --alluredir=test_result/ test_hoster.py
 
