@@ -34,7 +34,7 @@ jobs:
         run: |
           pipenv run pytest --alluredir=test_result/ test_hoster.py
       - name: Allure Report action from marketplace
-        uses: simple-elf/test_result-action@master
+        uses: simple-elf/allure-results-action@master
         if: always()
         #id: allure-report
         with:
@@ -54,4 +54,4 @@ jobs:
           
       - name: Run allure report
         run: |
-          pipenv run --allure serve test_result
+          pipenv run --allure serve allure-results
