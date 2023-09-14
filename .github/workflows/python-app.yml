@@ -35,4 +35,4 @@ jobs:
           pipenv run pytest --alluredir=test_result/ test_hoster.py
       - name: Run allure report
         run: |
-          pipenv run allure serve test_result
+          pipenv run --allure serve test_result
