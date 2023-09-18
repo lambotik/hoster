@@ -36,7 +36,7 @@ jobs:
           pipenv run pytest -s -v --alluredir=test_result/ test_hoster.py
 
       - name: Allure results
-        uses: hoster_API/allure-report-action@master
+        uses: simple-elf/allure-report-action@master
         if: always()
         id: allure-report
         with:
