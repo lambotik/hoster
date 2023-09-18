@@ -35,6 +35,16 @@ jobs:
         run: |
           pipenv run pytest -s -v --alluredir=test_result/ test_hoster.py
 
+      - name: Add allure information
+        working-directory: allure-results
+        if: always()
+        run: |
+          echo GIT_BRANCH=${{ github.head_ref || github.ref_name }}  >> environment.properties
+          echo GIT_COMMIT_ID=${{ github.sha }} >> environment.properties
+          echo GIT_COMMIT_MESSAGE=$(git show -s --format=%s HEAD) >> environment.properties
+          echo GIT_COMMIT_AUTHOR_NAME=$(git show -s --format='%ae' HEAD) >> environment.properties
+          echo GIT_COMMIT_TIME=$(git show -s --format=%ci HEAD) >> environment.properties
+          echo CHROME_VERSION=$(google-chrome --product-version) >> environment.properties
       - name: Allure results
         uses: simple-elf/allure-report-action@master
         if: always()
@@ -49,11 +59,11 @@ jobs:
         if: always()
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          PERSONAL_TOKEN: ${{ secrets.CI_TOKEN }}
           PUBLISH_BRANCH: gh-pages
           PUBLISH_DIR: allure-history
 
       - name: Generate report URL
         if: always()
         run: |
-          echo "REPORT_URL=https://repo$GITHUB_RUN_NUMBER/" >> "$GITHUB_ENV"
+          echo "REPORT_URL=https:/repo$GITHUB_RUN_NUMBER/" >> $GITHUB_ENV
