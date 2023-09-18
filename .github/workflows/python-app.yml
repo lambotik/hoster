@@ -3,10 +3,15 @@ name: Test API
 on: push
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
-    continue-on-error: true
+    timeout-minutes: 10
+
     steps:
+      - name: Validation of tests
+        uses: actions/checkout@v2
+
+      # Setup Python (faster than using Python container)
       - name: Setup Python
         uses: actions/setup-python@v2
         with:
@@ -25,9 +30,10 @@ jobs:
         if: steps.cache-pipenv.outputs.cache-hit != 'true'
         run: |
           pipenv install -r requirements.txt
-      - name: Run test
+          
+      - name: Run test suite
         run: |
-          pytest -s -v --alluredir=test_result/ test_hoster.py
+          pipenv run pytest -s -v --alluredir=test_result/ test_hoster.py
 
      
 
