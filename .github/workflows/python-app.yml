@@ -2,6 +2,12 @@
 name: Test allure result
 on: push
 
+permissions:
+  contents: read
+
+env:
+  BASE_URL: ${{secrets.BASE_URL}}
+
 jobs:
   test:
     runs-on: ubuntu-latest
