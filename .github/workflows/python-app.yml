@@ -1,5 +1,5 @@
 # .github/workflows/app.yaml
-name: Test API
+name: Test allure result
 on: push
 
 jobs:
