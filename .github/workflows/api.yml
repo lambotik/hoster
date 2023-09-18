@@ -7,20 +7,28 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-
-      - name: Checkout (copy) gh-pages repository to GitHub runner
+      - name: Validation of tests
         uses: actions/checkout@v2
-        with:
-          ref: gh-pages
-          path: ./.github/gh-pages
 
-      - name: Run UI-tests via docker-compose
-        #env:
-          #LOGIN: ${{ secrets.LOGIN }}
-          #PASSWORD: ${{ secrets.PASSWORD }}
+      # Setup Python (faster than using Python container)
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.11"
+
+      - name: Install pipenv
         run: |
-          docker-compose up --exit-code-from regression || true
+          python -m pip install --upgrade pipenv wheel
+      - id: cache-pipenv
+        uses: actions/cache@v1
+        with:
+          path: ~/.local/share/virtualenvs
+          key: ${{ runner.os }}-pipenv-${{ hashFiles('**/Pipfile.lock') }}
+
+      - name: Install dependencies
+        if: steps.cache-pipenv.outputs.cache-hit != 'true'
+        run: |
+          pipenv install -r requirements.txt
 
       - name: Copy history from gh-pages to allure-results
         run: |
