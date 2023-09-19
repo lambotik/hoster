@@ -80,14 +80,6 @@ jobs:
         run: pip install -r requirements.txt
       - name: Download all workflow run artifacts
         uses: actions/download-artifact@v3
-      - name: first_test
-        if: "github.event.inputs.deployment_target == 'first_test'"
-        run: pytest -s -v tests/test_main_page.py::test_fill_form --alluredir=allure-results
-        continue-on-error: true
-      - name: second_test
-        if: "github.event.inputs.deployment_target == 'second_test'"
-        run: pytest -s -v tests/test_main_page.py::test_create_sms --alluredir=allure-results
-        continue-on-error: true
       - name: all
         if: "github.event.inputs.deployment_target == 'all'"
         run: pytest --alluredir=allure-results
