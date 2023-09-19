@@ -59,8 +59,4 @@ jobs:
           allure_results: allure-results
           allure_report: allure-report
           gh_pages: gh-pages
-          allure_history: allure-history
-      - name: Generate report URL
-        if: always()
-        run: |
-          echo "REPORT_URL=https://lambotik.github.io/hoster_API/$GITHUB_RUN_NUMBER/" >> $GITHUB_ENV
+          allure_history: allure-history 
