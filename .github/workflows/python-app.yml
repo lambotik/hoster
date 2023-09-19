@@ -72,4 +72,4 @@ jobs:
       - name: Generate report URL
         if: always()
         run: |
-          echo "REPORT_URL=https://repo$GITHUB_RUN_NUMBER/" >> $GITHUB_ENV
+          echo "REPORT_URL=https://$GITHUB_RUN_NUMBER/" >> $GITHUB_ENV
