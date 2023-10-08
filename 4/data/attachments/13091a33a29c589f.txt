@@ -1,0 +1,6 @@
+
+
+Method DELETE: Delete default user data
+Url:  https://reqres.in/api/users/2
+Response body:  
+Status code is: 204

@@ -1,0 +1,19 @@
+
+
+Method POST: Create User
+https://reqres.in/api/users
+Response body:  {"name":"lambotik","job":"qa","id":"550","createdAt":"2023-10-08T07:50:34.886Z"}
+All body keys is present: ['name', 'job', 'id', 'createdAt']
+Status code is: 201
+name: lambotik: is correct
+Value: 550, is presence in: id
+Value: qa, is presence in: job
+
+
+Method PUT: Update new user data
+https://reqres.in/api/users/550
+Response body:  {"name":"HOSTER","job":"QA","updatedAt":"2023-10-08T07:50:35.249Z"}
+Status code is: 200
+All body keys is present: ['name', 'job', 'updatedAt']
+name: HOSTER: is correct
+job: QA: is correct

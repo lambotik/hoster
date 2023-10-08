@@ -1,0 +1,16 @@
+
+
+Method POST: Create User
+https://reqres.in/api/users
+Response body:  {"name":"lambotik","job":"qa","id":"300","createdAt":"2023-10-08T07:50:36.383Z"}
+All body keys is present: ['name', 'job', 'id', 'createdAt']
+Status code is: 201
+name: lambotik: is correct
+Value: 300, is presence in: id
+Value: qa, is presence in: job
+
+
+Method DELETE: Delete new user data
+Url:  https://reqres.in/api/users/300
+Response body:  
+Status code is: 204

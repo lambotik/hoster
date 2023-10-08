@@ -1,0 +1,12 @@
+
+
+Method GET: Check user info default user
+https://reqres.in/api/users/2
+Response body:  {"data":{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}}
+Status code is: 200
+All body keys is present: ['data', 'support']
+All body keys is present: ['id', 'email', 'first_name', 'last_name', 'avatar']
+Value: janet.weaver@reqres.in, is presence in: email
+All body keys is present: ['url', 'text']
+Value: https://reqres.in/#support-heading, is presence in: url
+Value: 2, is presence in: id

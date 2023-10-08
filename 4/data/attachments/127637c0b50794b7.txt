@@ -1,0 +1,9 @@
+
+
+Method PUT: Update default user data
+https://reqres.in/api/users/2
+Response body:  {"name":"morpheus","job":"zion resident","updatedAt":"2023-10-08T07:50:35.622Z"}
+Status code is: 200
+All body keys is present: ['name', 'job', 'updatedAt']
+name: morpheus: is correct
+job: zion resident: is correct
