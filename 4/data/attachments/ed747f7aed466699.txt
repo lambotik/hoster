@@ -2,14 +2,14 @@
 
 Method POST: Create User
 https://reqres.in/api/users
-Response body:  {"name":"lambotik","job":"qa","id":"877","createdAt":"2023-10-08T07:50:33.985Z"}
+Response body:  {"name":"lambotik","job":"qa","id":"434","createdAt":"2023-10-08T07:54:15.073Z"}
 All body keys is present: ['name', 'job', 'id', 'createdAt']
 Status code is: 201
 name: lambotik: is correct
-Value: 877, is presence in: id
+Value: 434, is presence in: id
 Value: qa, is presence in: job
 
 
 Method GET: Check user info new user
-https://reqres.in/api/users/877
+https://reqres.in/api/users/434
 Response body:  {}
